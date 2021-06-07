@@ -1,4 +1,3 @@
-from texto import obtener_texto
 from Etapa1 import CorrerJuego
 from Etapa2 import GenerarDiccionario
 from Etapa3 import elegir_palabra_aleatoria, pedir_longitud
