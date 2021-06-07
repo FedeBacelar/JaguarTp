@@ -26,7 +26,7 @@ def palabras_candidatas(Diccionario, Longitud = None):
     LONGITUD_MINIMA = 5
     if Longitud:
         if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
-            Longitud = random.choice(range(5, 16))
+            Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
         for Palabra in Lista:
             if Longitud == len(Palabra):
                 ListaLongitud += [Palabra]

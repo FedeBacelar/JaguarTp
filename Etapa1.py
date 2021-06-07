@@ -162,4 +162,4 @@ def CorrerJuego(PalabraAdivinar,Puntos):
     print(MensajeDelResultado(PalabraAdivinar, cadenaOculta))
     
     
-    return([aciertos,desaciertos, PuntosEnPartida])
+    return(PuntosEnPartida)

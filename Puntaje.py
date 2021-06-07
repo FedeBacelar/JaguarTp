@@ -1,6 +1,7 @@
 def tabla(nombre, puntos):
 	"""
 	Genera una caja con puntajes
+	Firma: Alejo
 	"""
 	tabla = NombresYPuntos(nombre, puntos)
 	constructor = []
@@ -17,6 +18,7 @@ def tabla(nombre, puntos):
 def palabra_grande(nombres):
 	"""
 	Retorna la posicion de la palabra mas grande
+	Firma: Alejo
 	"""
 	acumulador = []
 	for nombre in nombres:
@@ -27,6 +29,7 @@ def palabra_grande(nombres):
 def NombresYPuntos(nombre, puntos):
 	"""
 	Brinda una lista con nombres y puntajes
+	Firma: Alejo
 	"""
 	archivo = open("tabla_puntajes.txt", "r+")
 	tabla = archivo.readline()
@@ -48,6 +51,7 @@ def NombresYPuntos(nombre, puntos):
 def separador(tabla):
 	"""
 	Quita los << - >> de la lista 
+	Firma: Alejo
 	"""
 	tabla = tabla.split("-")
 	tabla = " ".join(tabla)
