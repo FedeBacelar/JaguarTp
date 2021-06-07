@@ -10,7 +10,13 @@ def pedir_longitud():
     """
     Condicion = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
     if Condicion.lower() == "s":
-        return int(input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): "))
+        Condicion = input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): ")
+        while Condicion.isalpha() or Condicion == "":
+            Condicion = input("Por favor, ingrese un numero: ")
+        Condicion = int(Condicion)
+    else:
+        Condicion = None
+    return Condicion
 
 
 def palabras_candidatas(Diccionario, Longitud = None):
@@ -41,3 +47,5 @@ def elegir_palabra_aleatoria(Diccionario, longitud):
     """
     palabra = random.choice(palabras_candidatas(Diccionario,longitud))
     return palabra
+
+
