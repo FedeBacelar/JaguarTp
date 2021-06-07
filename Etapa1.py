@@ -11,17 +11,21 @@ def Ingreso(cadenaOculta, caracteresErrados):
 
     Firma: FedeBacelar
     """
-    caracter = str(input("Ingrese Letra_ ")) #Usuario ingresa letra
+    caracter = str(input("Ingrese Letra_ ")) 
     
     while not (caracter.isalpha() and len(caracter) == 1) and not(salidaAnticipada(caracter)) or Repetido(caracter, cadenaOculta, caracteresErrados): #Se evalua si 1)"No es una letra" 2)"No hubo salida anticipada" 3)"No hay un caracter repetido"
-        if not (caracter.isalpha() and len(caracter) == 1): #Si lo ingresado no es una letra
+        
+        if not (caracter.isalpha() and len(caracter) == 1): 
             print("Ingreso invalido: Solo se permite ingresar una letra")
-        elif Repetido(caracter,cadenaOculta, caracteresErrados): #Si lo ingresado no esta repetido
+        
+        elif Repetido(caracter,cadenaOculta, caracteresErrados):
             print("Letra repetida, por favor vuelva a ingresar nueva letra")
+        
         caracter = str(input("Ingrese Letra_ "))
+    
     return caracter.lower()
 
-def Repetido(caracter,cadenaOculta, errados): #ROCÍO
+def Repetido(caracter,cadenaOculta, errados): 
     """
     Toma como parametros: caracter, cadenaOculta, errados
     Mientras el caracter este repetido retornara TRUE, caso contrario FALSE
@@ -65,7 +69,7 @@ def Contador(aciertos,desaciertos,caracteresErrados):
     """
     Toma como parametros: aciertos(int), desaciertos(int) caracteresErrados(str)
     Retorna un contador con aciertos, desaciertos y caracteres errados
-        Firma: FedeBace;ar
+        Firma: FedeBacelar
     """
     Puntos = " Aciertos: " + str(aciertos) + " Desaciertos: " + str(desaciertos) + caracteresErrados
     return(Puntos)

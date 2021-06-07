@@ -2,34 +2,39 @@ import random
 
 def pedir_longitud():
     """
-    Le pide al usuario la longitud de la palabra candidata y devuelve esa longitud
-    Firma: Abigail
+    Define si el parametro Longitud tendrá un valor o no, bajo condiciones definidas.
+    Pregunta al usuario si quiere una longitud específica para la palabra candidata.
+    En caso afirmativo, se la pide y devuelve esa longitud.
+    Firma: Axel
     """
-    Condicion = str(input("Desea condicionar la longitud de la palabra a adivinar? (s/n): "))
+    Condicion = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
     if Condicion.lower() == "s":
-        return int(input("Ingrese Longitud (Si el numero ingresado es menor a la longitud minima(5) se tomara el valor minima): "))
+        return int(input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): "))
 
-
-def palabras_candidatas(Diccionario,Longitud = None):
+def palabras_candidatas(Diccionario, Longitud = None):
     """
-    Recibe como parametros un diccionario y longitud(opcional)
-    Retorna una lista con palabras candidatas (si no se especifica la longitud esta sera aleatoria)
-    Firma: Abigail
+    Tiene como parámetros a Diccionario y Longitud, la cual no tiene valor a menos que lo 
+    defina la función pedir_longitud, por lo que lo vuelve un parámetro que puede ser ignorado.
+    Retorna una lista con palabras candidatas (si la longitud no se encuentra dentro del rango, será aleatoria).
+    Firma: Axel
     """ 
+    Lista = list(Diccionario)    
+    ListaLongitud = []
+    LONGITUD_MAXIMA = 15
     LONGITUD_MINIMA = 5
-    ListaKeys = list(Diccionario.keys())
     if Longitud:
-        Longitud = LONGITUD_MINIMA if Longitud <= LONGITUD_MINIMA else Longitud
-        Lista = [Palabra for Palabra in ListaKeys if len(Palabra) == Longitud]
-    else:
-        Lista = ListaKeys
-
+        if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
+            Longitud = random.choice(range(5, 16))
+        for Palabra in Lista:
+            if Longitud == len(Palabra):
+                ListaLongitud += [Palabra]
+        Lista = ListaLongitud
     return Lista
 
 def elegir_palabra_aleatoria(Diccionario, longitud):
     """
-    Recibe un Diccionario y una longitud, devuelve una clave aleatoria de la misma longitud
-    Firma: Abigail
+    Recibe un Diccionario y una longitud, devuelve una clave aleatoria de la misma longitud.
+    Firma: Abigail y Axel
     """
-    palabra=random.choice(palabras_candidatas(Diccionario,longitud))
+    palabra = random.choice(palabras_candidatas(Diccionario,longitud))
     return palabra

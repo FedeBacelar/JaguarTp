@@ -41,8 +41,7 @@ def filtro(lista):
 
 def GenerarDiccionario():
     """Firma: Rocío y Abigail"""
-    diccionario = crear_diccionario() 
-    #print (diccionario_ordenado(diccionario))
+    diccionario = diccionario_ordenado(crear_diccionario()) 
+    #print diccionario
     #print ("El total de palabras es:", total_palabras())
     return(diccionario)
-    
