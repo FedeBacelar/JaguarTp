@@ -8,7 +8,7 @@ from Etapa5 import Puntaje, SeguirJuego
 
 def main():
     """
-    Firma: FedeBacelar, Alejo, Rocio, Abigail
+    Firma: FedeBacelar, Alejo, Rocio, Abigail, Axel
     """
     Puntos= 0
     Diccionario = GenerarDiccionario()
