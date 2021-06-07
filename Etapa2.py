@@ -1,5 +1,6 @@
 from texto import obtener_texto
 
+
 def crear_diccionario():
     """"Recibe un texto y crea un diccionario con las palabras, retorna un diccionario con
     la palabra y la cantidad de veces que esta aparece en el texto
@@ -9,13 +10,14 @@ def crear_diccionario():
     lista= texto.split()
     lista= filtro(lista)
     diccionario={}
-    minimo_letras= 5 
+    minimo_letras= 5
     for palabra in lista:
         if len(palabra)>= minimo_letras and palabra not in diccionario:
                 diccionario[palabra]= lista.count(palabra)
     return diccionario
 
-def diccionario_ordenado(diccionario): 
+
+def diccionario_ordenado(diccionario):
     """Convirte un diccionario a una lista ordenada, retorna el diccionario ordenado
     Firma: Abigail"""
     lista=list(diccionario.items())
@@ -23,10 +25,12 @@ def diccionario_ordenado(diccionario):
     ordenado = dict(lista)
     return ordenado
 
+
 def total_palabras():
     """Retorna la cantidad de palabras que hay en el diccionario
     Firma:Rocío"""
     return (len(crear_diccionario().keys()))
+
 
 def filtro(lista):
     """Filtra los acentos y símbolos de puntuación, devuelve la lista sin símbolos y omitiendo acentos
@@ -39,9 +43,10 @@ def filtro(lista):
     lista_filtrada= (cadena.split())
     return lista_filtrada
 
+
 def GenerarDiccionario():
     """Firma: Rocío y Abigail"""
-    diccionario = diccionario_ordenado(crear_diccionario()) 
+    diccionario = diccionario_ordenado(crear_diccionario())
     #print diccionario
     #print ("El total de palabras es:", total_palabras())
     return(diccionario)

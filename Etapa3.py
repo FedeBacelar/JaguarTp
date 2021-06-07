@@ -1,5 +1,6 @@
 import random
 
+
 def pedir_longitud():
     """
     Define si el parametro Longitud tendrá un valor o no, bajo condiciones definidas.
@@ -11,6 +12,7 @@ def pedir_longitud():
     if Condicion.lower() == "s":
         return int(input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): "))
 
+
 def palabras_candidatas(Diccionario, Longitud = None):
     """
     Tiene como parámetros a Diccionario y Longitud, la cual no tiene valor a menos que lo 
@@ -18,7 +20,7 @@ def palabras_candidatas(Diccionario, Longitud = None):
     Retorna una lista con palabras candidatas (si la longitud no se encuentra dentro del rango, será aleatoria).
     Firma: Axel
     """ 
-    Lista = list(Diccionario)    
+    Lista = list(Diccionario)
     ListaLongitud = []
     LONGITUD_MAXIMA = 15
     LONGITUD_MINIMA = 5
@@ -30,6 +32,7 @@ def palabras_candidatas(Diccionario, Longitud = None):
                 ListaLongitud += [Palabra]
         Lista = ListaLongitud
     return Lista
+
 
 def elegir_palabra_aleatoria(Diccionario, longitud):
     """

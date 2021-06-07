@@ -1,4 +1,4 @@
-def Puntaje(Aciertos,Desaciertos,Puntos=0):
+def Puntaje(Aciertos, Desaciertos, Puntos=0):
     """
     Toma como parametros: Aciertos(int), Desaciertos(int), Puntos(int)
     Retorna los puntos del usuario
@@ -6,6 +6,7 @@ def Puntaje(Aciertos,Desaciertos,Puntos=0):
     """
     Puntos += (Aciertos*10 - Desaciertos*5)
     return Puntos
+
 
 def SeguirJuego():
     """
