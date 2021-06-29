@@ -1,11 +1,10 @@
 
-def Grafico(Desaciertos, StrContador, PuntosEnPartida, StrMensaje, cadenaOculta):
+def Grafico(Desaciertos, StrContador, PuntosEnPartida, StrMensaje, cadenaOculta, NombreJugador):
     """
     Esta funcion proporciona al usuario una interfaz grafica con listas en forma de matriz
     En funcion de los desaciertos corresponde una matriz
     Firma: FedeBacelar
     """
-
 
     Dibujo = ()
     if Desaciertos == 0:
@@ -30,9 +29,13 @@ def Grafico(Desaciertos, StrContador, PuntosEnPartida, StrMensaje, cadenaOculta)
     for Lista in Dibujo:
         for elemento in Lista:
             print(elemento, end="")
+        if h == 7:
+            print("    " + "Turno de: " + NombreJugador, end="")
         if h == 6:
             print("    " + StrContador +" Puntos:"+str(PuntosEnPartida), end="")
         elif h == 2:
             print("       " + StrMensaje + "--> " + cadenaOculta, end="")
+        
         h -= 1
+
         print("")
