@@ -135,7 +135,7 @@ absolutamente,0,0,3
 absolutismo,0,17,0
 absolutista,0,4,0
 absolutistas,0,5,0
-absoluto,3,8,3
+absoluto,3,8,2
 absorber,0,1,0
 absorbi,0,0,1
 absorbia,0,0,2
@@ -676,7 +676,6 @@ aguila,0,0,2
 aguja,0,0,5
 agujereada,1,0,0
 aguzando,0,1,0
-ahjam,0,0,1
 ahjami,0,0,1
 ahlan,0,0,3
 ahogabamos,1,0,0
@@ -978,7 +977,7 @@ americana,2,1,1
 americano,1,1,0
 americanos,0,1,0
 americas,0,0,1
-amiga,0,1,3
+amiga,0,1,2
 amigable,0,1,0
 amigablemente,1,0,0
 amigas,1,1,0
@@ -1791,7 +1790,7 @@ atados,0,0,2
 atajo,0,0,1
 atalaya,0,1,0
 atando,2,0,0
-ataque,0,6,1
+ataque,0,6,0
 ataques,0,1,0
 ataron,0,0,1
 atasen,0,0,1
@@ -2052,7 +2051,7 @@ azulada,1,1,0
 azulado,0,2,0
 azulados,1,0,0
 azuleaban,1,0,0
-azules,5,4,3
+azules,5,4,2
 azuzaba,0,1,0
 azuzandoles,1,0,0
 añadido,0,0,1
@@ -2165,7 +2164,7 @@ barcos,2,0,2
 bardas,1,0,0
 barkhia,0,0,1
 barmacidas,0,0,1
-barmaki,0,0,5
+barmaki,0,0,4
 barmakida,0,0,1
 barnizadas,1,0,0
 barnizado,1,0,0
@@ -2198,7 +2197,7 @@ barro,3,2,4
 basada,0,0,1
 basan,0,1,0
 baselga,0,210,0
-basrah,0,0,9
+basrah,0,0,8
 bassora,0,0,1
 bassri,0,0,1
 basta,1,3,8
@@ -2644,7 +2643,7 @@ cabellera,1,2,5
 cabelleras,1,1,1
 cabello,0,3,5
 cabellos,2,1,3
-cabeza,39,43,64
+cabeza,39,43,63
 cabezadas,1,0,0
 cabezas,2,2,3
 cabia,0,1,0
@@ -3269,7 +3268,7 @@ chasqueando,1,0,0
 chasquidos,1,0,0
 chateaubriand,0,1,0
 chato,0,1,0
-cheitan,0,0,3
+cheitan,0,0,2
 cherif,0,0,1
 chica,7,1,0
 chico,10,0,0
@@ -3287,7 +3286,7 @@ chillona,1,0,0
 chillonas,1,0,0
 chillones,0,1,0
 chimenea,1,2,0
-china,0,0,3
+china,0,0,2
 chiquillada,0,2,0
 chiquillo,1,0,0
 chiquillos,8,0,0
@@ -3555,7 +3554,6 @@ colocarle,1,0,0
 colocaron,1,0,2
 colocarse,0,3,1
 coloco,0,1,8
-colofon,0,1,0
 colombine,0,0,1
 coloque,0,0,1
 color,8,8,12
@@ -4974,7 +4972,6 @@ dejeme,1,2,0
 dejemos,0,1,2
 dejen,0,1,0
 dejes,0,0,2
-dejla,0,0,1
 delaciones,0,1,0
 delantal,2,0,0
 delante,4,6,17
@@ -5713,7 +5710,7 @@ diluvio,0,3,0
 dimitir,1,0,0
 dimos,0,0,1
 dinar,0,0,7
-dinares,0,0,26
+dinares,0,0,25
 dinero,18,10,16
 dinos,0,0,2
 dioses,0,1,0
@@ -5875,7 +5872,7 @@ distribuidos,0,1,0
 distrito,15,0,0
 disueltas,0,1,0
 divagador,0,0,1
-divan,0,0,17
+divan,0,0,16
 diversas,0,2,1
 diversion,0,1,0
 diversiones,0,1,2
@@ -5968,7 +5965,7 @@ doncella,2,1,2
 doncellas,0,0,17
 donde,24,44,70
 dones,0,0,1
-doniazada,0,0,14
+doniazada,0,0,13
 dorada,0,2,0
 doradas,1,1,0
 dorado,0,0,1
@@ -6047,7 +6044,6 @@ duros,8,4,0
 duvernois,0,0,1
 ebano,0,0,7
 eblis,0,0,6
-ebook,0,1,0
 ebrio,0,2,0
 ebrios,3,1,0
 echaban,1,1,0
@@ -6099,7 +6095,7 @@ eficacia,0,0,1
 eficaz,0,0,1
 efluvios,0,1,0
 efrit,0,0,138
-efrita,0,0,11
+efrita,0,0,10
 efrits,0,0,14
 efusion,1,0,1
 efusivamente,0,0,1
@@ -7123,7 +7119,7 @@ estancia,0,7,5
 estancias,0,0,1
 estandarte,0,1,0
 estando,4,2,2
-estanque,0,0,12
+estanque,0,0,11
 estanterias,0,1,0
 estantes,0,2,0
 estar,4,17,16
@@ -7261,7 +7257,7 @@ eufemismo,0,0,2
 eunuco,1,0,4
 eunucos,0,1,1
 euripides,0,0,2
-europa,2,1,7
+europa,2,1,6
 europea,0,0,3
 europeas,0,0,1
 europeo,0,0,1
@@ -8553,7 +8549,7 @@ hambre,4,1,0
 hambrienta,1,1,0
 hambriento,1,0,0
 hambrientos,1,0,0
-hammam,0,0,16
+hammam,0,0,15
 haran,0,1,1
 harapo,1,0,0
 harapos,0,0,1
@@ -8867,7 +8863,7 @@ huries,0,0,1
 hurtadillas,0,0,1
 husmeaban,1,0,0
 hussein,0,0,1
-hutared,0,0,2
+hutared,0,0,1
 huyas,0,1,0
 huyen,0,1,0
 huyendo,1,3,2
@@ -8918,7 +8914,6 @@ iguales,3,3,4
 igualitarias,0,1,0
 igualmente,0,5,3
 iliada,0,0,2
-illustration,0,1,0
 ilumina,0,0,1
 iluminaban,0,1,0
 iluminada,0,0,1
@@ -8935,7 +8930,7 @@ ilustrados,1,0,2
 ilustre,0,4,3
 ilustres,0,1,1
 ilustrisima,0,3,0
-imagen,3,8,69
+imagen,3,8,6
 imagenes,0,1,0
 imaginaba,2,0,0
 imaginacion,2,14,2
@@ -9691,7 +9686,7 @@ jazmin,0,0,4
 jazmines,1,0,3
 jefes,0,0,5
 jenofonte,0,0,2
-jeque,0,0,28
+jeque,0,0,27
 jeques,0,0,3
 jerjes,0,1,0
 jeroglificos,0,1,0
@@ -9795,7 +9790,7 @@ kamar,0,0,3
 kamaralzaman,0,0,1
 kanoon,0,0,2
 kassib,0,0,4
-kenafa,0,0,6
+kenafa,0,0,5
 kitab,0,0,1
 kropotkine,0,0,1
 labio,0,0,1
@@ -10433,7 +10428,7 @@ malos,1,9,3
 malvada,0,0,1
 malvado,0,2,0
 malvados,0,0,1
-mamalik,0,0,4
+mamalik,0,0,3
 mamarracho,0,1,0
 mamarrachos,0,1,0
 mameluk,0,0,1
@@ -10748,7 +10743,7 @@ medrada,0,1,0
 medrados,0,1,0
 medrar,0,1,0
 medrosica,1,0,0
-meidan,0,0,2
+meidan,0,0,1
 mejicana,0,1,0
 mejicanas,0,1,0
 mejicano,0,0,2
@@ -10963,7 +10958,7 @@ miras,0,2,0
 mirbeau,0,0,1
 miron,0,1,0
 mirra,0,0,1
-mirrikh,0,0,2
+mirrikh,0,0,1
 mirto,0,0,1
 miserable,5,5,2
 miserables,0,4,0
@@ -11261,7 +11256,6 @@ musculos,2,3,0
 musculoso,1,0,0
 museo,0,1,0
 musica,3,0,2
-muslemine,0,0,1
 muslos,0,0,9
 musulman,0,0,2
 musulmana,0,0,5
@@ -11338,7 +11332,6 @@ naves,0,0,4
 navidad,1,0,0
 navio,1,0,1
 navios,0,0,1
-nawabs,0,0,1
 nazareno,0,0,2
 nazario,0,1,0
 neblinas,1,0,0
@@ -11426,7 +11419,7 @@ niños,6,0,9
 noble,0,8,8
 nobles,0,6,1
 nobleza,0,5,0
-noche,50,26,144
+noche,50,26,143
 noches,10,14,35
 nocion,0,3,1
 nocturna,0,3,1
@@ -11515,7 +11508,7 @@ nunca,14,42,34
 nuncio,2,0,0
 nupcial,1,0,0
 nureddin,0,0,3
-nusrani,0,0,2
+nusrani,0,0,1
 nutrido,1,0,0
 nuñez,0,0,1
 oasis,0,1,0
@@ -12140,7 +12133,6 @@ patente,0,1,0
 paternal,1,3,0
 paternalmente,2,0,0
 paternidad,1,2,0
-paterno,0,0,1
 patibulo,0,0,1
 patillas,0,2,0
 patilludo,0,1,0
@@ -14441,7 +14433,7 @@ rigidez,1,0,0
 rigido,1,3,0
 rigor,0,1,0
 rigores,0,1,0
-rihan,0,0,12
+rihan,0,0,11
 rihani,0,0,1
 rikaa,0,0,1
 rimada,0,0,1
@@ -14622,7 +14614,6 @@ ruidosos,2,2,0
 ruina,1,0,0
 ruinas,0,0,3
 ruines,0,1,0
-ruman,0,0,1
 rumbo,3,0,0
 rumbos,0,1,0
 rumboso,0,1,0
@@ -14636,7 +14627,7 @@ rustico,1,0,0
 rutas,0,1,1
 ruyan,0,0,17
 ruzafa,1,1,0
-saalik,0,0,22
+saalik,0,0,21
 saaluk,0,0,28
 sabados,2,0,0
 sabanas,1,0,0
@@ -14883,8 +14874,8 @@ saturno,0,0,1
 sayal,0,1,0
 sazon,0,1,0
 schahrazada,0,0,60
-schahriar,0,0,19
-schahzaman,0,0,14
+schahriar,0,0,18
+schahzaman,0,0,13
 schamsennahar,0,0,1
 schazaman,0,0,1
 schehada,0,0,1
@@ -15314,7 +15305,7 @@ soldados,1,14,11
 soldadotes,0,1,0
 soldandolos,1,0,0
 soledad,3,1,7
-soleiman,0,0,14
+soleiman,0,0,13
 solemne,2,1,0
 solemnidad,1,2,0
 soles,0,0,1
@@ -15674,7 +15665,6 @@ suyos,2,5,4
 sènto,15,0,0
 tabacalera,2,0,0
 tabaco,3,2,1
-tabaria,0,0,1
 taberna,8,2,0
 tabernas,1,1,0
 tabiques,1,0,0
@@ -17082,7 +17072,6 @@ vulvas,0,0,1
 wagner,1,0,0
 walace,0,4,0
 wardan,0,0,1
-wekil,0,0,1
 wilson,0,0,2
 xviii,0,0,1
 xxiii,0,0,1
@@ -17117,7 +17106,7 @@ zarpar,0,0,1
 zigzag,0,1,0
 zobeida,0,0,16
 zocos,0,0,4
-zohal,0,0,2
+zohal,0,0,1
 zoila,0,1,0
 zorreros,1,0,0
 zorrilla,0,0,1

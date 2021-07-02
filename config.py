@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def config():
     """
 Retorna un diccionario, teniendo como keys las palabras claves de configuracion y
@@ -52,3 +53,8 @@ lista = ["LONG_PALABRA_MIN", 87]
 posicion = 1
 lista, pos = busqueda_error(lista, posicion)
 print(config())
+=======
+"""
+Config en desarrollo
+"""
+>>>>>>> 1e1d5f5917a236ee69e416470a7de83f3d44e407
