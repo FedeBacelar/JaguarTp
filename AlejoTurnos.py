@@ -23,6 +23,7 @@ para los aciertos, desaciertos, etc.
 
 firma: Alejo
 """
+<<<<<<< HEAD
     max_nombres = 5
     Jugadores = []
     DiccionarioJugadores = {}
@@ -34,15 +35,36 @@ firma: Alejo
                 nombre = input("Por favor, ingrese al menos un nombre: ")
                 Jugadores.append(nombre) if nombre != "" else None
         elif nombre in Jugadores:
+=======
+    numero = 1
+    max_nombres = 5
+    nombres = []
+    DiccionarioJugadores = {}
+    nombre = "Aqui iran los nombres"
+    while nombre != (None or "") and len(nombres) < max_nombres:
+        nombre = input("Ingrese el nombre del jugador {}: ".format(numero))
+        if nombre == "" and len(DiccionarioJugadores) == 0:
+            while len(nombres) == 0:
+                nombre = input("Por favor, ingrese al menos un nombre: ")
+        elif nombre in nombres:
+>>>>>>> 0a7d1d5b4cd743a3de7c4703dd405e3ca78842ac
             print("Ingrese otro nombre por favor")
         elif nombre == "":
             pass
         else:
+<<<<<<< HEAD
             Jugadores.append(nombre)
             numero += 1
     random.shuffle(Jugadores)
     for Jugador in Jugadores:
         DiccionarioJugadores[Jugador] = ["","",0,0,"",0]
+=======
+            nombres.append(nombre)
+            numero += 1
+    random.shuffle(nombres)
+    for Jugador in nombres:
+        DiccionarioJugadores[Jugador] = ["","","","","",""]
+>>>>>>> 0a7d1d5b4cd743a3de7c4703dd405e3ca78842ac
     return DiccionarioJugadores
 
 def nueva_organizacion(DiccionarioJugadores, Ganador = None):
@@ -55,6 +77,7 @@ en cuestion. Atencion: Solo acepta un jugador
     if Ganador == None:
         random.shuffle(Jugadores)
         for Jugador in Jugadores:
+<<<<<<< HEAD
             turnos_nuevos[Jugador] = ["","",0,0,"",0]
     else:
         Jugadores.remove(Ganador)
@@ -62,6 +85,15 @@ en cuestion. Atencion: Solo acepta un jugador
         turnos_nuevos[Ganador] = ["","",0,0,"",0]
         for Jugador in Jugadores:
             turnos_nuevos[Jugador] = ["","",0,0,"",0]
+=======
+            turnos_nuevos[Jugador] = ["","","","","",""]
+    else:
+        Jugadores.remove(Ganador)
+        random.shuffle(Jugadores)
+        turnos_nuevos[Ganador] = ["","","","","",""]
+        for Jugador in Jugadores:
+            turnos_nuevos[Jugador] = ["","","","","",""]
+>>>>>>> 0a7d1d5b4cd743a3de7c4703dd405e3ca78842ac
     return turnos_nuevos
     
 
@@ -77,6 +109,7 @@ firma: Alejo
     Puntos = {} if Puntos == None else Puntos
     if len(Puntos) == 0: 
         for Jugador in nombres:
+<<<<<<< HEAD
             Puntos[Jugador] = DiccionarioJugadores[Jugador][5]
     else:
         for Jugador in nombres:
@@ -85,3 +118,13 @@ firma: Alejo
 Puntos = puntaje({'rasquillo': ['', '', 0, 0, '', 25], 'juan': ['', '', 0, 0, '', 7], 'Pepe': ['', '', 0, 0, '', 73], 'alberto': ['', '', 0, 0, '', 23], 'manuel': ['', '', 0, 0, '', 17]})
 print(puntaje({'rasquillo': ['', '', 0, 0, '', 25], 'juan': ['', '', 0, 0, '', 7], 'Pepe': ['', '', 0, 0, '', 73], 'alberto': ['', '', 0, 0, '', 23], 'manuel': ['', '', 0, 0, '', 17]}, Puntos))
   
+=======
+            Puntos[Jugador] = int(DiccionarioJugadores[Jugador][1])
+    else:
+        for Jugador in nombres:
+            Puntos[Jugador] += DiccionarioJugadores[Jugador][1]
+    return Puntos
+
+print(nueva_organizacion({"Benedicto":"","Pepe":"","Juan":""}))
+    
+>>>>>>> 0a7d1d5b4cd743a3de7c4703dd405e3ca78842ac
