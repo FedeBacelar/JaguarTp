@@ -1,3 +1,40 @@
+
+def diccionario_ordenado(diccionario):
+    """Convirte un diccionario a una lista ordenada, retorna el diccionario ordenado
+    Firma: Abigail"""
+    lista=list(diccionario.items())
+    lista.sort()
+    ordenado = dict(lista)
+    return ordenado
+
+
+def total_palabras():
+    """Retorna la cantidad de palabras que hay en el diccionario
+    Firma:Rocío"""
+    return (len(crear_diccionario().keys()))
+
+
+def filtro(lista):
+    """Filtra los acentos y símbolos de puntuación, devuelve la lista sin símbolos y omitiendo acentos
+    Firma: Rocío"""
+    cadena=""
+    for elemento in lista:
+        cadena+= ","+ elemento
+    filtrar = cadena.maketrans("áéíòóúü,?¿¡!;.\"()_--:«»", "aeioouu                ")
+    cadena = cadena.translate(filtrar)
+    lista_filtrada= (cadena.split())
+    return lista_filtrada
+
+
+def GenerarDiccionario():
+    """Firma: Rocío y Abigail"""
+    diccionario = diccionario_ordenado(crear_diccionario())
+    #print diccionario
+    #print ("El total de palabras es:", total_palabras())
+    return(diccionario)
+
+"""------------------------------------------------------ETAPA8------------------------------------------------------------------"""
+
 def get_line(archivo):
     """Recibe un archivo para leerlo linea por linea y devuelve una lista con las palabras
     filtradas de ESA LINEA.
@@ -66,55 +103,12 @@ def crear_lista(lista_archivos):
         lista.append(lista_total)                             
     return lista
     
-
-"""FUNCIONES DE LA ETAPA 2"""
-
-def filtro(lista):
-    """Filtra los acentos y símbolos de puntuación, devuelve la lista sin símbolos y omitiendo acentos
-    Firma: Rocío"""
-    cadena=""
-    for elemento in lista:
-        cadena+= ","+ elemento
-    filtrar = cadena.maketrans("áéíòóúü,?¿¡!;.\"()_--:«»[]#", "aeioouu                   ")
-    cadena = cadena.translate(filtrar)
-    lista_filtrada= (cadena.split())
-    
-    return lista_filtrada
-
-
-def diccionario_ordenado(diccionario):
-    """Convirte un diccionario a una lista ordenada, retorna el diccionario ordenado
-    Firma: Abigail"""
-    lista=list(diccionario.items())
-    lista.sort()
-    ordenado = dict(lista)
-    
-    return ordenado
-
-
 def GenerarDiccionario():
     """Firma: Rocío y Abigail"""
-    diccionario = diccionario_ordenado(crear_diccionario(lista_archivos))
-    escribir(palabras,diccionario)
-    #print diccionario
-    #print ("El total de palabras es:", total_palabras())
+    with open("Cuentos.txt","r") as archivo1, open("La araña negra - tomo 1.txt","r") as archivo2, open("Las 1000 Noches y 1 Noche.txt","r") as archivo3, open("palabras.csv","w") as palabras:
+        lista_archivos = [archivo1,archivo2,archivo3]
+        diccionario = diccionario_ordenado(crear_diccionario(lista_archivos))
+        escribir(palabras,diccionario)
+
     return diccionario
-
-
-
-archivo1=open("Cuentos.txt","r")
-archivo2=open("La araña negra - tomo 1.txt","r")
-archivo3=open("Las 1000 Noches y 1 Noche.txt","r")
-
-palabras=open("palabras.csv","w")
-
-lista_archivos=[archivo1,archivo2,archivo3]
-
-GenerarDiccionario()
-
-archivo1.close()
-archivo2.close()
-archivo3.close()
-
-palabras.close()
 

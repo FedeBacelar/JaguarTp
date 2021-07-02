@@ -163,7 +163,8 @@ def SeguirJugando(DiccionarioJugadores):
 def CorrerJuego(DiccionarioJugadores):
     AbandonarJuego = False
     while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego:
-        
+        HayGanador = False
+        Ganador = None
         for Jugador in DiccionarioJugadores:
             #{'Jugador':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida]}
 
@@ -196,8 +197,11 @@ def CorrerJuego(DiccionarioJugadores):
                     print("Lo siento {}, la palabra era {}\n\n".format(Jugador, PalabraAdivinar))
                 #Nota: hay condiciones repetidas: Podriamos armar una funcion la cual retorne TRUE si el jugador gano, caso en que pierda retorna False
                 #Nota2: El return podria ser en numeros: 1)Gano, 2)Perdio, 0)Ninguna de las dos
-
                 
+                if cadenaOculta.count("?") == 0 and not HayGanador:
+                    Ganador = Jugador
+                    HayGanador = True
+
                 DiccionarioJugadores[Jugador][1] = caracter 
                 DiccionarioJugadores[Jugador][2] = aciertos
                 DiccionarioJugadores[Jugador][3] = desaciertos    
@@ -207,15 +211,5 @@ def CorrerJuego(DiccionarioJugadores):
 
 
     
-    return DiccionarioJugadores #Retornara los datos de la primera partida
-
-             
-    
-
-
-DiccionarioJugadores = {'Martina': ['asd', '', 0, 0, '', '???', 0], 'Juan': ['asd', '', 0, 0, '', '???', 0], 'Lucas': ['asd', '', 0, 0, '', '???', 0], 'Eduardo': ['asd', '', 0, 0, '', 
-'???', 0], 'Pedro': ['asd', '', 0, 0, '', '???', 0]}
-
-
-print(CorrerJuego(DiccionarioJugadores))
+    return DiccionarioJugadores, Ganador
 
