@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def config():
     """
 Retorna un diccionario, teniendo como keys las palabras claves de configuracion y
@@ -49,12 +48,8 @@ Firma: Alejo
     posicion += 1
     return lista_aprobada, posicion
 
-lista = ["LONG_PALABRA_MIN", 87]
-posicion = 1
-lista, pos = busqueda_error(lista, posicion)
-print(config())
-=======
-"""
-Config en desarrollo
-"""
->>>>>>> 1e1d5f5917a236ee69e416470a7de83f3d44e407
+
+ # Falta reparar unos bugs cuando se borra una linea de la configuracion.csv pero para cambios erroneos en una linea funciona perfecto. Los problemas
+ # surgen cuando se borra una linea de la configuracion.csv pues ahi reescribira los datos y asignara valores de forma ordenada cuando la realidad es
+ # que el archivo al estar desordenado, asignara valores ordenados lo cual es indeseado para el jugador
+
