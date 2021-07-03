@@ -60,7 +60,7 @@ def salidaAnticipada(caracter):
     """
     return (caracter.upper() == 'FIN' or caracter == '0')
 
-def CaracterEnPalabra(caracter, PalabraAdivinar):
+def CaracterEnPalabra(caracter, PalabraAdivinar): #PARA PUNTOS
     """
     Toma como parametros: caracter(str), PalabraAdivinar(str)
     Retorna TRUE en caso de que el caracter este en PalabraAdivinar
@@ -162,9 +162,9 @@ def SeguirJugando(DiccionarioJugadores):
 
 def CorrerJuego(DiccionarioJugadores):
     AbandonarJuego = False
-    while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego:
-        HayGanador = False
-        Ganador = None
+    Ganador = False
+    while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego and not Ganador:
+
         for Jugador in DiccionarioJugadores:
             #{'Jugador':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida]}
 
@@ -177,7 +177,7 @@ def CorrerJuego(DiccionarioJugadores):
             PuntosEnPartida = DiccionarioJugadores[Jugador][6]
             cadenaOculta = DiccionarioJugadores[Jugador][5]
            
-            while (desaciertos <= 7 and not Fallo) and not AbandonarJuego and cadenaOculta.count("?") != 0:
+            while (desaciertos <= 7 and not Fallo) and not AbandonarJuego and cadenaOculta.count("?") != 0 and not Ganador:
                
                 PuntosEnPartida = Puntaje(aciertos,desaciertos) + DiccionarioJugadores[Jugador][6]    
                 Grafico(desaciertos,Contador(aciertos, desaciertos, caracteresErrados),PuntosEnPartida,Mensaje(caracter, PalabraAdivinar), cadenaOculta, Jugador)
@@ -198,9 +198,7 @@ def CorrerJuego(DiccionarioJugadores):
                 #Nota: hay condiciones repetidas: Podriamos armar una funcion la cual retorne TRUE si el jugador gano, caso en que pierda retorna False
                 #Nota2: El return podria ser en numeros: 1)Gano, 2)Perdio, 0)Ninguna de las dos
                 
-                if cadenaOculta.count("?") == 0 and not HayGanador:
-                    Ganador = Jugador
-                    HayGanador = True
+
 
                 DiccionarioJugadores[Jugador][1] = caracter 
                 DiccionarioJugadores[Jugador][2] = aciertos
@@ -208,8 +206,8 @@ def CorrerJuego(DiccionarioJugadores):
                 DiccionarioJugadores[Jugador][4] = caracteresErrados
                 DiccionarioJugadores[Jugador][5] = cadenaOculta
                 DiccionarioJugadores[Jugador][6] = PuntosEnPartida
-
+    #Funcion sumarle puntos de ganador o de todos perdieron
 
     
-    return DiccionarioJugadores, Ganador
+    return DiccionarioJugadores
 

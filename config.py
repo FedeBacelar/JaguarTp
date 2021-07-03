@@ -1,10 +1,10 @@
 def config():
     """
-Retorna un diccionario, teniendo como keys las palabras claves de configuracion y
-como values, los valores de cada palabra clave
+    Retorna un diccionario, teniendo como keys las palabras claves de configuracion y
+    como values, los valores de cada palabra clave
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     long_deseada = 7
     confi_dict = {}
     posicion = 0
@@ -21,11 +21,11 @@ Firma: Alejo
 
 def limpieza(texto):
     """
-Brinda una lista el conforme el texto de la configuracion dado.
-Dejandolo en optimas condiciones para su uso en config()
+    Brinda una lista el conforme el texto de la configuracion dado.
+    Dejandolo en optimas condiciones para su uso en config()
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     texto = texto.split(",")
     if len(texto) > 1:
         texto[1] = int(texto[1])
@@ -33,10 +33,10 @@ Firma: Alejo
 
 def busqueda_error(lista, posicion):
     """
-Busca errores en la lista extraida del archivo csv, de presentar errores se colocan los valores por defecto
+    Busca errores en la lista extraida del archivo csv, de presentar errores se colocan los valores por defecto
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     n_def = ["MAX_USUARIOS","LONG_PALABRA_MIN","MAX_DESACIERTOS","PUNTOS_ACIERTOS","PUNTOS_DESACIERTOS","PUNTOS_ADIVINA_PALABRA","PUNTOS_RESTA_GANA_PROGRAMA"]
     v_def = [10, 5, 7, 10, 5, 100, 2]
     if len(lista) != 2:

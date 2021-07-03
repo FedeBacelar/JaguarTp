@@ -51,7 +51,7 @@ def nueva_organizacion(DiccionarioJugadores, Ganador = None):
     
 
 def puntaje(DiccionarioJugadores, Puntos = None):
-    """
+    """{'fede': 10, 'Alejo':20}
     De acuerdo al puntaje de los jugadores (hayan jugado o no) se adjunta los
     puntos de cada jugador en un diccionario donde las llaves sera cada jugador
     con su respectivo puntaje
