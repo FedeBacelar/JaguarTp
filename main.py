@@ -25,7 +25,7 @@ def main():
             Turnos[Jugador][0] = elegir_palabra_aleatoria(DiccionarioPalabras, LongitudPalabra) #Otorgamos palabra a los jugadores
             Turnos[Jugador][5] = OcultarCadena(Turnos[Jugador][0]) #Ocultamos su palabra
         
-        DicResultadosJugadores = CorrerJuego(Turnos) #Borrar ganador etapa1
+        DicResultadosJugadores, Ganador = CorrerJuego(Turnos) #Borrar ganador etapa1
         Turnos = nueva_organizacion(Turnos, Ganador)
         seguir = SeguirJuego()
 
