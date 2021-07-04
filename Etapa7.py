@@ -67,21 +67,3 @@ def OrdenarPorPuntaje(dic):
         lista.append([clave,dic[clave][0],dic[clave][1],dic[clave][2],dic[clave][3]])
     lista.sort(key= lambda x: x[1], reverse=True)
     return lista
-
-
-"""
-------------------Ejemplo que hice para ver si funciona--------------------
-def main():
-    ImprimirResultadoParcial(DiccionarioJugadores, NombreGanador)
-    print("")
-    DiccionarioPuntos= ResultadosGenerales(DiccionarioJugadores, NombreGanador,Puntos = None)
-    ImprimirResultadosGenerales(DiccionarioPuntos, CantidadPartidas)
-
-
-DiccionarioJugadores={'Carla':["tomate","f",2,3,"ghf","t?m?t?",10],'Franco':["mueble","e",5,4,"thdq","mueble",20],'Lauti':["peinar","r",5,7,"thdfrhq","pe?in?r",15]}
-NombreGanador= "Franco"
-CantidadPartidas=2
-main()
-
-"""
-    

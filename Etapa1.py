@@ -165,6 +165,7 @@ def SeguirJugando(DiccionarioJugadores):
 def CorrerJuego(DiccionarioJugadores):
     AbandonarJuego = False
     Ganador = False
+    NombreGanador = None
     MAX_DESACIERTOS = 7
     PUNTOS_RESTA_GANA_PROGRAMA = 5
     PUNTOS_ADIVINA_PALABRA = 10
