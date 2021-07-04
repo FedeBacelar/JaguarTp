@@ -8,18 +8,24 @@ def pedir_longitud():
     En caso afirmativo, se la pide y devuelve esa longitud.
     Firma: Axel
     """
-    Condicion = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
-    if Condicion.lower() == "s":
-        Condicion = input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): ")
-        while Condicion.isalpha() or Condicion == "":
-            Condicion = input("Por favor, ingrese un numero: ")
-        Condicion = int(Condicion)
+    LONGITUD_MAXIMA = 15
+    LONGITUD_MINIMA = 5
+
+    Ingreso = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
+    if Ingreso.lower() == "s":
+        Longitud = input("Ingrese la longitud que desea (mínimo 5 y máximo 15, o será al azar): ")
+        while Longitud.isalpha() or Longitud == "":
+            Longitud = input("Por favor, ingrese un numero: ")
+        Longitud = int(Longitud)
+        if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
+            Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
+
     else:
-        Condicion = None
-    return Condicion
+        Longitud = Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
+    return Longitud
 
 
-def palabras_candidatas(Diccionario, Longitud = None):
+def palabras_candidatas(Diccionario, Longitud):
     """
     Tiene como parámetros a Diccionario y Longitud, la cual no tiene valor a menos que lo 
     defina la función pedir_longitud, por lo que lo vuelve un parámetro que puede ser ignorado.
@@ -28,19 +34,17 @@ def palabras_candidatas(Diccionario, Longitud = None):
     """ 
     Lista = list(Diccionario)
     ListaLongitud = []
-    LONGITUD_MAXIMA = 15
-    LONGITUD_MINIMA = 5
-    if Longitud:
-        if Longitud < LONGITUD_MINIMA or Longitud > LONGITUD_MAXIMA:
-            Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
-        for Palabra in Lista:
-            if Longitud == len(Palabra):
-                ListaLongitud += [Palabra]
-        Lista = ListaLongitud
+
+    for Palabra in Lista:
+        if Longitud == len(Palabra):
+            ListaLongitud += [Palabra]
+
+    Lista = ListaLongitud
+
     return Lista
 
 
-def elegir_palabra_aleatoria(Diccionario, longitud):
+def elegir_palabra_aleatoria(Diccionario, longitud = None):
     """
     Recibe un Diccionario y una longitud, devuelve una clave aleatoria de la misma longitud.
     Firma: Abigail y Axel

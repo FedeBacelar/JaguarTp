@@ -1,14 +1,16 @@
 from EtapaGrafica import Grafico
 
 
-"""ETAPA_5:BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
+"""ETAPA_5:ACTUALIZAR,BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
 def Puntaje(Aciertos,Desaciertos,Puntos=0):
     """
-    Toma como parametros: Aciertos(int), Desaciertos(int), Puntos(int)
+    Toma como parametros: Aciertos(int), Desaciertos(int)
     Retorna los puntos del usuario
     Firma: FedeBacelar
     """
-    Puntos += (Aciertos*10 - Desaciertos*5)
+    PUNTOS_ACIERTOS = 2
+    PUNTOS_DESACIERTOS = 1
+    Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
     return Puntos
 
 def SeguirJuego():
@@ -60,7 +62,7 @@ def salidaAnticipada(caracter):
     """
     return (caracter.upper() == 'FIN' or caracter == '0')
 
-def CaracterEnPalabra(caracter, PalabraAdivinar):
+def CaracterEnPalabra(caracter, PalabraAdivinar): #PARA PUNTOS
     """
     Toma como parametros: caracter(str), PalabraAdivinar(str)
     Retorna TRUE en caso de que el caracter este en PalabraAdivinar
@@ -162,9 +164,13 @@ def SeguirJugando(DiccionarioJugadores):
 
 def CorrerJuego(DiccionarioJugadores):
     AbandonarJuego = False
-    while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego:
-        HayGanador = False
-        Ganador = None
+    Ganador = False
+    NombreGanador = None
+    MAX_DESACIERTOS = 7
+    PUNTOS_RESTA_GANA_PROGRAMA = 5
+    PUNTOS_ADIVINA_PALABRA = 10
+    while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego and not Ganador:
+
         for Jugador in DiccionarioJugadores:
             #{'Jugador':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida]}
 
@@ -177,9 +183,8 @@ def CorrerJuego(DiccionarioJugadores):
             PuntosEnPartida = DiccionarioJugadores[Jugador][6]
             cadenaOculta = DiccionarioJugadores[Jugador][5]
            
-            while (desaciertos <= 7 and not Fallo) and not AbandonarJuego and cadenaOculta.count("?") != 0:
-               
-                PuntosEnPartida = Puntaje(aciertos,desaciertos) + DiccionarioJugadores[Jugador][6]    
+            while (desaciertos <= MAX_DESACIERTOS and not Fallo) and not AbandonarJuego and cadenaOculta.count("?") != 0 and not Ganador:
+                   
                 Grafico(desaciertos,Contador(aciertos, desaciertos, caracteresErrados),PuntosEnPartida,Mensaje(caracter, PalabraAdivinar), cadenaOculta, Jugador)
                 #print(Jugador + " : " +Mensaje(caracter, PalabraAdivinar) + "--> "  + cadenaOculta + Contador(aciertos, desaciertos, caracteresErrados) + " Puntos:" + str(PuntosEnPartida))
                 caracter = Ingreso(cadenaOculta, caracteresErrados)      
@@ -192,24 +197,27 @@ def CorrerJuego(DiccionarioJugadores):
                 AbandonarJuego = salidaAnticipada(caracter)
                 
                 if cadenaOculta.count("?") == 0:
+                    Ganador = True
+                    NombreGanador = Jugador
                     print("Felicidaes {}, la palabra era {}\n\n".format(Jugador, PalabraAdivinar)) 
                 elif desaciertos == 8:
                     print("Lo siento {}, la palabra era {}\n\n".format(Jugador, PalabraAdivinar))
                 #Nota: hay condiciones repetidas: Podriamos armar una funcion la cual retorne TRUE si el jugador gano, caso en que pierda retorna False
                 #Nota2: El return podria ser en numeros: 1)Gano, 2)Perdio, 0)Ninguna de las dos
-                
-                if cadenaOculta.count("?") == 0 and not HayGanador:
-                    Ganador = Jugador
-                    HayGanador = True
+                PuntosEnPartida = Puntaje(aciertos,desaciertos)
+
 
                 DiccionarioJugadores[Jugador][1] = caracter 
                 DiccionarioJugadores[Jugador][2] = aciertos
                 DiccionarioJugadores[Jugador][3] = desaciertos    
                 DiccionarioJugadores[Jugador][4] = caracteresErrados
                 DiccionarioJugadores[Jugador][5] = cadenaOculta
-                DiccionarioJugadores[Jugador][6] = PuntosEnPartida
-
-
+                DiccionarioJugadores[Jugador][6] = PuntosEnPartida     
     
-    return DiccionarioJugadores, Ganador
-
+    if not Ganador:
+        for Jugador in DiccionarioJugadores:
+            DiccionarioJugadores[Jugador][6] -= PUNTOS_RESTA_GANA_PROGRAMA
+    else:
+        DiccionarioJugadores[NombreGanador][6] += PUNTOS_ADIVINA_PALABRA
+    
+    return DiccionarioJugadores, NombreGanador
