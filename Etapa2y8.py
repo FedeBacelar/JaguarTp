@@ -1,4 +1,3 @@
-
 def diccionario_ordenado(diccionario):
     """Convirte un diccionario a una lista ordenada, retorna el diccionario ordenado
     Firma: Abigail"""
@@ -10,7 +9,7 @@ def diccionario_ordenado(diccionario):
 
 def total_palabras():
     """Retorna la cantidad de palabras que hay en el diccionario
-    Firma:Rocío"""
+    Firma: Rocío"""
     return (len(crear_diccionario().keys()))
 
 
@@ -111,4 +110,3 @@ def GenerarDiccionario():
         escribir(palabras,diccionario)
 
     return diccionario
-

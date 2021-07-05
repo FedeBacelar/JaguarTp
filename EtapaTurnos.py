@@ -4,6 +4,8 @@ def pedir_nombres(max_nombres):
     """
 Pide nombres con una longitud maxima de los mismos y retorna una lista
 con los nombres al azar
+
+Firma: Alejo
 """
     n_lista = []
     nombre = "Aqui iran los nombres"
@@ -25,6 +27,8 @@ con los nombres al azar
 def dict_nombres(Lista_nombres, Ganador = None):
     """
 Con una lista de nombres predefinida, devuelve un diccionario con los jugadores
+
+Firma: Alejo
 """
     DiccionarioJugadores = {}
     if Ganador != None:
@@ -39,6 +43,8 @@ def nueva_organizacion(DiccionarioJugadores, Ganador = None):
     """
     Crea una nueva organizacion de turnos en base al ganador y a los jugadores
     en cuestion. Atencion: Solo acepta un jugador
+    
+    Firma: Alejo
     """
     turnos_nuevos = {}
     Jugadores = list(DiccionarioJugadores.keys())

@@ -1,5 +1,6 @@
 from EtapaGrafica import Grafico
 from Etapa5 import Puntaje
+from config import parametros
 
 """ETAPA_5:ACTUALIZAR,BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
 def Puntaje(Aciertos,Desaciertos,Puntos=0):
@@ -8,8 +9,8 @@ def Puntaje(Aciertos,Desaciertos,Puntos=0):
     Retorna los puntos del usuario
     Firma: FedeBacelar
     """
-    PUNTOS_ACIERTOS = 2
-    PUNTOS_DESACIERTOS = 1
+    PUNTOS_ACIERTOS = parametros["PUNTOS_ACIERTOS"]
+    PUNTOS_DESACIERTOS = parametros["PUNTOS_DESACIERTOS"]
     Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
     return Puntos
 
@@ -162,9 +163,9 @@ def CorrerJuego(DiccionarioJugadores):
     Ganador = False
     NombreGanador = None
 
-    MAX_DESACIERTOS = 7
-    PUNTOS_RESTA_GANA_PROGRAMA = 5
-    PUNTOS_ADIVINA_PALABRA = 10
+    MAX_DESACIERTOS = parametros["MAX_DESACIERTOS"]
+    PUNTOS_RESTA_GANA_PROGRAMA = parametros["PUNTOS_RESTA_GANA_PROGRAMA"]
+    PUNTOS_ADIVINA_PALABRA = parametros["PUNTOS_ADIVINA_PALABRA"]
 
     while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego and not Ganador:
 

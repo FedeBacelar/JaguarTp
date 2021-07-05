@@ -1,11 +1,13 @@
+from config import parametros
+
 def Puntaje(Aciertos,Desaciertos,Puntos=0):
     """
     Toma como parametros: Aciertos(int), Desaciertos(int)
     Retorna los puntos del usuario
     Firma: FedeBacelar
     """
-    PUNTOS_ACIERTOS = 2
-    PUNTOS_DESACIERTOS = 1
+    PUNTOS_ACIERTOS = parametros["PUNTOS_ACIERTOS"]
+    PUNTOS_DESACIERTOS = parametros["PUNTOS_DESACIERTOS"]
     Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
     return Puntos
 

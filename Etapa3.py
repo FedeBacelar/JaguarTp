@@ -1,4 +1,5 @@
 import random
+from config import parametros
 
 def pedir_longitud():
     """
@@ -8,7 +9,7 @@ def pedir_longitud():
     Firma: Axel
     """
     LONGITUD_MAXIMA = 15
-    LONGITUD_MINIMA = 5
+    LONGITUD_MINIMA = parametros["LONG_PALABRA_MIN"]
 
     Ingreso = input("Presione la tecla S si desea establecer una longitud determinada para la palabra: ")
     if Ingreso.lower() == "s":
