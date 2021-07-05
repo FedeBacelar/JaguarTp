@@ -66,7 +66,3 @@ Genra un grafico en el cual el usuario podra visualizar que parametros puede alt
         for variable in list(parametros.keys()):
             print("{} - {}: {}".format(variable, parametros[int(variable)], lectura[int(variable) -1][1]))
     return "-"*long
-
-print(cambio_conf())
-
-        
