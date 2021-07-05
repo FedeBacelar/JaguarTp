@@ -1,7 +1,8 @@
 def ImprimirResultadoParcial(DiccionarioJugadores, NombreGanador):
     """Recibe un diccionario de jugadores y el nombre del ganador e imprime los resultados de la PARTIDA
     el dic es asi: {'Jugador':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida]}
-    Firma: Abigail  """
+    Firma: Abigail
+    """
     
     for jugador in DiccionarioJugadores:
         
@@ -16,11 +17,9 @@ def ImprimirResultadoParcial(DiccionarioJugadores, NombreGanador):
 
 
 def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos = None):
-    """ De acuerdo al puntaje de los jugadores (hayan jugado o no) se adjunta los
-    puntos de cada jugador en un diccionario donde las llaves sera cada jugador
-    con su respectivo puntaje
-
-    firma: Alejo
+    """ Recibe un diccionario con los datos de los jugadores, tambien el nombre del ganador de ESA partida y un diccionario de puntos. Devuelve
+    el diccionario de puntos actualizado"
+    Firma: Abigail
     """
     nombres = list(DiccionarioJugadores.keys())
     Puntos = {} if Puntos == None else Puntos
@@ -44,7 +43,8 @@ def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos = None):
 
 def ImprimirResultadosGenerales(Puntos, CantidadPartidas):
     """Recibe el diccionario de puntos y la cantidad de partidas jugadas e imprime los resultados generales.
-    Firma: Abigail """
+    Firma: Abigail
+    """
     
     print("Partidas jugadas: ", CantidadPartidas)
     
