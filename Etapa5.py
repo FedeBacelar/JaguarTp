@@ -1,12 +1,13 @@
-def Puntaje(Aciertos, Desaciertos, Puntos=0):
+def Puntaje(Aciertos,Desaciertos,Puntos=0):
     """
-    Toma como parametros: Aciertos(int), Desaciertos(int), Puntos(int)
+    Toma como parametros: Aciertos(int), Desaciertos(int)
     Retorna los puntos del usuario
     Firma: FedeBacelar
     """
-    Puntos += (Aciertos*10 - Desaciertos*5)
+    PUNTOS_ACIERTOS = 2
+    PUNTOS_DESACIERTOS = 1
+    Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
     return Puntos
-
 
 def SeguirJuego():
     """
@@ -15,4 +16,3 @@ def SeguirJuego():
     """
     seguir = str(input("Desea seguir jugando? (s/n)"))
     return seguir.lower() == "s"
-    

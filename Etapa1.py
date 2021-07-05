@@ -1,5 +1,5 @@
 from EtapaGrafica import Grafico
-
+from Etapa5 import Puntaje
 
 """ETAPA_5:ACTUALIZAR,BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
 def Puntaje(Aciertos,Desaciertos,Puntos=0):
@@ -13,13 +13,6 @@ def Puntaje(Aciertos,Desaciertos,Puntos=0):
     Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
     return Puntos
 
-def SeguirJuego():
-    """
-    Retorna la solicitud de "seguir jugando" del usuario en forma de: True o False
-    FedeBacelar: FedeBacelar
-    """
-    seguir = str(input("Desea seguir jugando? (s/n)"))
-    return seguir.lower() == "s"
 """-----------------------------------ETAPA_1-------------------------------------------------------------------------------"""
 def Ingreso(cadenaOculta, caracteresErrados):
     """
@@ -163,12 +156,16 @@ def SeguirJugando(DiccionarioJugadores):
     return Seguir
 
 def CorrerJuego(DiccionarioJugadores):
+
     AbandonarJuego = False
+
     Ganador = False
     NombreGanador = None
+
     MAX_DESACIERTOS = 7
     PUNTOS_RESTA_GANA_PROGRAMA = 5
     PUNTOS_ADIVINA_PALABRA = 10
+
     while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego and not Ganador:
 
         for Jugador in DiccionarioJugadores:
@@ -193,17 +190,17 @@ def CorrerJuego(DiccionarioJugadores):
                 aciertos += contarAciertos(caracter, PalabraAdivinar)   
                 desaciertos = contarDesaciertos(desaciertos, caracter, PalabraAdivinar, caracteresErrados)[0] 
                 caracteresErrados = contarDesaciertos(desaciertos, caracter, PalabraAdivinar, caracteresErrados)[1]
+
                 Fallo = not CaracterEnPalabra(caracter, PalabraAdivinar)
                 AbandonarJuego = salidaAnticipada(caracter)
                 
                 if cadenaOculta.count("?") == 0:
                     Ganador = True
                     NombreGanador = Jugador
-                    print("Felicidaes {}, la palabra era {}\n\n".format(Jugador, PalabraAdivinar)) 
+                    print("Felicidaes {}, acertaste!! {}\n\n".format(Jugador, PalabraAdivinar)) 
                 elif desaciertos == 8:
-                    print("Lo siento {}, la palabra era {}\n\n".format(Jugador, PalabraAdivinar))
-                #Nota: hay condiciones repetidas: Podriamos armar una funcion la cual retorne TRUE si el jugador gano, caso en que pierda retorna False
-                #Nota2: El return podria ser en numeros: 1)Gano, 2)Perdio, 0)Ninguna de las dos
+                    print("Lo siento {}, perdiste!!\n\n".format(Jugador, PalabraAdivinar))
+        
                 PuntosEnPartida = Puntaje(aciertos,desaciertos)
 
 
