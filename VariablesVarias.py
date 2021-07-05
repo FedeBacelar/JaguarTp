@@ -37,7 +37,4 @@ Firma: Alejo
             parametros[len(parametros)+1]= parametro[0] 
     return parametros
 
-conf = {'MAX_USUARIOS': 10, 'LONG_PALABRA_MIN': 5, 'MAX_DESACIERTOS': 7, 'PUNTOS_ACIERTOS': 10, 'PUNTOS_DESACIERTOS': 5, 'PUNTOS_ADIVINA_PALABRA': 100, 'PUNTOS_RESTA_GANA_PROGRAMA': 20}
-print(graf_conf())
-print(cambio_conf(conf))
         
