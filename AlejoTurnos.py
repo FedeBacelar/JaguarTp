@@ -21,6 +21,7 @@ con los nombres al azar
     random.shuffle(n_lista)
     return n_lista
 
+
 def dict_nombres(Lista_nombres, Ganador = None):
     """
 Con una lista de nombres predefinida, devuelve un diccionario con los jugadores
@@ -32,6 +33,7 @@ Con una lista de nombres predefinida, devuelve un diccionario con los jugadores
     for Jugador in Lista_nombres:
         DiccionarioJugadores[Jugador] = ["","",0,0,"","",0]
     return DiccionarioJugadores
+
 
 def nueva_organizacion(DiccionarioJugadores, Ganador = None):
     """
@@ -47,14 +49,9 @@ def nueva_organizacion(DiccionarioJugadores, Ganador = None):
         turnos_nuevos = dict_nombres(Jugadores, Ganador)
     return turnos_nuevos
     
-
-<<<<<<< HEAD
+    
 def puntaje(DiccionarioJugadores, Puntos = {}):
     """
-=======
-def puntaje(DiccionarioJugadores, Puntos = None):
-    """{'fede': 10, 'Alejo':20}
->>>>>>> 564390a5904a6f4968425d62bcaeb4571d8efabb
     De acuerdo al puntaje de los jugadores (hayan jugado o no) se adjunta los
     puntos de cada jugador en un diccionario donde las llaves sera cada jugador
     con su respectivo puntaje
