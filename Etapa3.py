@@ -1,6 +1,5 @@
 import random
 
-
 def pedir_longitud():
     """
     Define si el parametro Longitud tendrá un valor o no, bajo condiciones definidas.
@@ -21,7 +20,7 @@ def pedir_longitud():
             Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
 
     else:
-        Longitud = Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
+        Longitud = random.choice(range(LONGITUD_MINIMA, LONGITUD_MAXIMA+1))
     return Longitud
 
 
@@ -43,7 +42,6 @@ def palabras_candidatas(Diccionario, Longitud):
 
     return Lista
 
-
 def elegir_palabra_aleatoria(Diccionario, longitud = None):
     """
     Recibe un Diccionario y una longitud, devuelve una clave aleatoria de la misma longitud.
@@ -52,4 +50,17 @@ def elegir_palabra_aleatoria(Diccionario, longitud = None):
     palabra = random.choice(palabras_candidatas(Diccionario,longitud))
     return palabra
 
-
+def palabra_a_adivinar(jugadores, DiccionarioPalabras, LongitudPalabra):
+    """
+    Toma como parámetros, los jugadores, las palabras a elegir y la longitud ingresada.
+    Devuelve para cada jugador una palabra dentro de la longitud pedida asegurando que no
+    se repitan las palabras entre ellos.
+    Firma: Rocío y Axel
+    """
+    lista_usadas=[]
+    for jugador in jugadores:
+        palabra = elegir_palabra_aleatoria(DiccionarioPalabras, LongitudPalabra)
+        while palabra in lista_usadas:
+            palabra = elegir_palabra_aleatoria(DiccionarioPalabras, LongitudPalabra)
+        lista_usadas+=[palabra]
+    return palabra 

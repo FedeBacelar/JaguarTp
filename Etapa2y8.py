@@ -105,7 +105,7 @@ def crear_lista(lista_archivos):
     
 def GenerarDiccionario():
     """Firma: Rocío y Abigail"""
-    with open("Cuentos.txt","r") as archivo1, open("La araña negra - tomo 1.txt","r") as archivo2, open("Las 1000 Noches y 1 Noche.txt","r") as archivo3, open("palabras.csv","w") as palabras:
+    with open("ArchivoTexto\Cuentos.txt","r") as archivo1, open("ArchivoTexto\La araña negra - tomo 1.txt","r") as archivo2, open("ArchivoTexto\Las 1000 Noches y 1 Noche.txt","r") as archivo3, open("ArchivoTexto\palabras.csv","w") as palabras:
         lista_archivos = [archivo1,archivo2,archivo3]
         diccionario = diccionario_ordenado(crear_diccionario(lista_archivos))
         escribir(palabras,diccionario)

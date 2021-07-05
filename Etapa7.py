@@ -12,7 +12,7 @@ def ImprimirResultadoParcial(DiccionarioJugadores, NombreGanador):
         PuntosEnPartida = DiccionarioJugadores[jugador][6]
         print("{} tu palabra era {}, tuviste {} aciertos y {} desaciertos. Sumaste {} puntos!".format(jugador,PalabraAdivinar,aciertos,desaciertos,PuntosEnPartida))
         
-    print("\n El ganador en esta partida fue: ", NombreGanador)
+    print("\n El ganador en esta partida fue: ", (NombreGanador if NombreGanador else 'Nadie'))
 
 
 
