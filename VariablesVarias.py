@@ -62,3 +62,24 @@ Firma: Alejo
         for valor in range(len(lectura)):
             parametros[valor+1] = lectura[valor][0] 
     return parametros
+
+
+def grafico_conf(parametros):
+    """
+Genra un grafico en el cual el usuario podra visualizar que parametros puede alterar
+"""
+    long = 40
+    print("-"*long)
+    with open("configuracion.csv", "r") as l_conf:
+        lectura = list(csv.reader(l_conf))
+        print(lectura)
+        print(parametros)
+        for variable in list(parametros.keys()):
+            print("{} - {}: {}".format(variable, parametros[int(variable)], lectura[int(variable)-1][1]))
+    return "-"*long
+
+def config_final():
+    cambio_conf()
+    return config()
+
+parametros = config_final()
