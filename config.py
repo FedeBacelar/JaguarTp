@@ -36,5 +36,3 @@ Firma: Alejo, FedeBacelar
             if key == lista[0] and type(lista[1]) == int:
                 confi_dict[key] = lista[1]
     return confi_dict
-
-parametros = config()

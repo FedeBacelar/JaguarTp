@@ -1,6 +1,6 @@
 from EtapaGrafica import Grafico
 from Etapa5 import Puntaje
-from config import parametros
+from VariablesVarias import parametros
 
 """ETAPA_5:ACTUALIZAR,BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
 def Puntaje(Aciertos,Desaciertos,Puntos=0):

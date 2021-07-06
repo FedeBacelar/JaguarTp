@@ -1,5 +1,7 @@
 import csv
 import os
+from config import*
+
 
 def cambio_conf():
     """
@@ -9,9 +11,12 @@ tener una referencia de lo que el usuario desea cambiar. Al final retornara
 
 Firma: Alejo
 """
-    parametros = opc_conf()
-    sigue = True
+    eleccion = input("Antes de iniciar el juego, ¿Desea cambiar algun valor de la configuracion?[s/n]: ")
+    while not eleccion.isalpha() or eleccion.lower() != "n" and eleccion.lower() != "s":
+            eleccion = input("Por favor ingrese 's' o 'n': ")
+    sigue = True if eleccion.lower() == "s" else False
     while sigue:
+        parametros = opc_conf()
         os.system('cls' if os.name == 'nt' else 'clear')
         print(grafico_conf(parametros))
         cambio = input("Ingrese el parametro que desee cambiar: ")
@@ -38,7 +43,7 @@ Firma: Alejo
             eleccion = input("Por favor ingrese 's' o 'n': ")
             os.system('cls' if os.name == 'nt' else 'clear')
         sigue = True if eleccion.lower() == 's' else False
-    return "Cambios hechos!!!"
+    return "Cambio Hecho!!"
     
 
 def opc_conf(parametros = {}):
@@ -66,3 +71,9 @@ Genra un grafico en el cual el usuario podra visualizar que parametros puede alt
         for variable in list(parametros.keys()):
             print("{} - {}: {}".format(variable, parametros[int(variable)], lectura[int(variable) -1][1]))
     return "-"*long
+
+def config_final():
+    cambio_conf()
+    return config()
+
+parametros = config_final()

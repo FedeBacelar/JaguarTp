@@ -1,5 +1,5 @@
 import random
-from config import parametros
+from VariablesVarias import parametros
 
 def pedir_longitud():
     """
