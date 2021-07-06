@@ -17,7 +17,6 @@ Firma: Alejo
     sigue = True if eleccion.lower() == "s" else False
     while sigue:
         parametros = opc_conf()
-        print(parametros)
         os.system('cls' if os.name == 'nt' else 'clear')
         print(grafico_conf(parametros))
         cambio = input("Ingrese el parametro que desee cambiar: ")
@@ -58,7 +57,6 @@ Firma: Alejo
 """
     with open("configuracion.csv", "r") as conf:
         lectura = list(csv.reader(conf, delimiter=','))
-        print(parametros)
         for valor in range(len(lectura)):
             parametros[valor+1] = lectura[valor][0] 
     return parametros
@@ -72,8 +70,6 @@ Genra un grafico en el cual el usuario podra visualizar que parametros puede alt
     print("-"*long)
     with open("configuracion.csv", "r") as l_conf:
         lectura = list(csv.reader(l_conf))
-        print(lectura)
-        print(parametros)
         for variable in list(parametros.keys()):
             print("{} - {}: {}".format(variable, parametros[int(variable)], lectura[int(variable)-1][1]))
     return "-"*long
