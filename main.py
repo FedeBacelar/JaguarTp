@@ -9,7 +9,6 @@ from VariablesVarias import parametros
 
 # Desde Etapa1 se puede desactivar/Activar la Interfaz grafica que produce la funcion "Grafico"
 
-# Si desea ACTIVAR la tabla de puntajes borre las # del main() 
 
 
 def main():
@@ -22,7 +21,7 @@ def main():
     Turnos = dict_nombres(Lista_nombres, Ganador = None)
     seguir = True
     CantidadDePartidas = 0
-    DiccionarioPuntos={}                                   #Agrego este diccionario
+    DiccionarioPuntos={}
     while seguir:
     
         LongitudPalabra = pedir_longitud()
@@ -35,7 +34,7 @@ def main():
         ImprimirResultadoParcial(DicResultadosJugadores,Ganador)
         
         if CantidadDePartidas == 0:
-            DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,DiccionarioPuntos) #me guarda los puntos de la primera partida
+            DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,DiccionarioPuntos)
         else:
             print("")
             DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,DiccionarioPuntos)
