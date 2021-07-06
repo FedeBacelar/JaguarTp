@@ -24,11 +24,11 @@ def main():
     CantidadDePartidas = 0
     while seguir:
     
-        LongitudPalabra = pedir_longitud() #Pedimos longitud
+        LongitudPalabra = pedir_longitud()
 
         for Jugador in Turnos:
-            Turnos[Jugador][0] = palabra_a_adivinar(Turnos, DiccionarioPalabras, LongitudPalabra ) #Le damos palabra al jugador
-            Turnos[Jugador][5] = OcultarCadena(Turnos[Jugador][0]) #Ocultamos su palabra
+            Turnos[Jugador][0] = palabra_a_adivinar(Turnos, DiccionarioPalabras, LongitudPalabra )
+            Turnos[Jugador][5] = OcultarCadena(Turnos[Jugador][0]) 
             
         DicResultadosJugadores, Ganador = CorrerJuego(Turnos)
 

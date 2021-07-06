@@ -25,13 +25,6 @@ def filtro(lista):
     return lista_filtrada
 
 
-def GenerarDiccionario():
-    """Firma: Rocío y Abigail"""
-    diccionario = diccionario_ordenado(crear_diccionario())
-    #print diccionario
-    #print ("El total de palabras es:", total_palabras())
-    return(diccionario)
-
 """------------------------------------------------------ETAPA8------------------------------------------------------------------"""
 
 def get_line(archivo):
@@ -43,9 +36,9 @@ def get_line(archivo):
     if line:
         line = line.lower()
         lista = line.rstrip("\n").split(" ")
-        lista = filtro(lista)                                     #la lista pasa por un filtro
+        lista = filtro(lista)                                     
     else:
-        lista=0                                                   #devuelve 0 si ya llego al final del texto
+        lista=0                                                  
     return lista
 
 
@@ -77,17 +70,17 @@ def crear_diccionario(lista_archivos):
     """Recibe una lista de archivos para crear un diccionario con las palabras de estos archivos y la cantidad de veces que aparece
      Firma:Abigail """
     
-    lista=crear_lista(lista_archivos)                 #Lista de la lista de palabras de los archivos
+    lista=crear_lista(lista_archivos)                 
     minimo_letras = 5
     diccionario = {}
     for lista_palabras in lista:
         
-        NUM_ARCHIVO= lista.index(lista_palabras)       #indica que archivo estoy usando
+        NUM_ARCHIVO= lista.index(lista_palabras)       
         
         for palabra in lista_palabras:
-            if len(palabra)>= minimo_letras and palabra.isalpha():                  #Condicion de que la palabra sean puras letras y que sea mayor al minimo de letras
+            if len(palabra)>= minimo_letras and palabra.isalpha():                  
                 if palabra not in diccionario:                                      
-                    diccionario[palabra]=[0 for x in range(0,len(lista_archivos))]  #Como valor pone una lista de 0, segun la cantidad de archivos
+                    diccionario[palabra]=[0 for x in range(0,len(lista_archivos))]  
                 diccionario[palabra][NUM_ARCHIVO]+=1                           
              
     return diccionario
@@ -98,7 +91,7 @@ def crear_lista(lista_archivos):
     Firma: Abigail """
     lista=[]
     for i in range(0,len(lista_archivos)):             
-        lista_total=lista_de_palabras(lista_archivos[i])      #lista de todas las palabras de ese archivo
+        lista_total=lista_de_palabras(lista_archivos[i])      
         lista.append(lista_total)                             
     return lista
     

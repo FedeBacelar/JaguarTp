@@ -2,11 +2,11 @@ import random
 
 def pedir_nombres(max_nombres):
     """
-Pide nombres con una longitud maxima de los mismos y retorna una lista
-con los nombres al azar
+    Pide nombres con una longitud maxima de los mismos y retorna una lista
+    con los nombres al azar
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     n_lista = []
     nombre = "Aqui iran los nombres"
     while len(n_lista) < max_nombres and nombre != "":
@@ -26,10 +26,10 @@ Firma: Alejo
 
 def dict_nombres(Lista_nombres, Ganador = None):
     """
-Con una lista de nombres predefinida, devuelve un diccionario con los jugadores
+    Con una lista de nombres predefinida, devuelve un diccionario con los jugadores
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     DiccionarioJugadores = {}
     if Ganador != None:
         Lista_nombres.remove(Ganador)

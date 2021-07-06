@@ -5,12 +5,12 @@ from config import*
 
 def cambio_conf():
     """
- Te pregunta si desea cambiar los valores por default de las configuraciones,
-en caso de ser afirmativo este se apoyara de la funcion graf_conf() para
-tener una referencia de lo que el usuario desea cambiar. Al final retornara
+    Te pregunta si desea cambiar los valores por default de las configuraciones,
+    en caso de ser afirmativo este se apoyara de la funcion graf_conf() para
+    tener una referencia de lo que el usuario desea cambiar. Al final retornara un texto
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     eleccion = input("Antes de iniciar el juego, ¿Desea cambiar algun valor de la configuracion?[s/n]: ")
     while not eleccion.isalpha() or eleccion.lower() != "n" and eleccion.lower() != "s":
             eleccion = input("Por favor ingrese 's' o 'n': ")
@@ -48,11 +48,11 @@ Firma: Alejo
 
 def opc_conf(parametros = {}):
     """
-Te brinda un diccionario con los nombres de los parametros con un numero
-de referencia a cada uno.
+    Te brinda un diccionario con los nombres de los parametros con un numero
+    de referencia a cada uno.
 
-Firma: Alejo
-"""
+    Firma: Alejo
+    """
     with open("configuracion.csv", "r") as conf:
         lectura = csv.reader(conf, delimiter=',')
         for parametro in lectura:
@@ -62,8 +62,8 @@ Firma: Alejo
 
 def grafico_conf(parametros):
     """
-Genra un grafico en el cual el usuario podra visualizar que parametros puede alterar
-"""
+    Genra un grafico en el cual el usuario podra visualizar que parametros puede alterar
+    """
     long = 40
     print("-"*long)
     with open("configuracion.csv", "r") as l_conf:

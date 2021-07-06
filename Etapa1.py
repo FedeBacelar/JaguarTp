@@ -2,18 +2,6 @@ from EtapaGrafica import Grafico
 from Etapa5 import Puntaje
 from VariablesVarias import parametros
 
-"""ETAPA_5:ACTUALIZAR,BORRAR E IMPORTAR LAS FUNCIONES CORRESPONDIENTES------------------------------------------------------------------"""
-def Puntaje(Aciertos,Desaciertos,Puntos=0):
-    """
-    Toma como parametros: Aciertos(int), Desaciertos(int)
-    Retorna los puntos del usuario
-    Firma: FedeBacelar
-    """
-    PUNTOS_ACIERTOS = parametros["PUNTOS_ACIERTOS"]
-    PUNTOS_DESACIERTOS = parametros["PUNTOS_DESACIERTOS"]
-    Puntos += (Aciertos*PUNTOS_ACIERTOS - Desaciertos*PUNTOS_DESACIERTOS)
-    return Puntos
-
 """-----------------------------------ETAPA_1-------------------------------------------------------------------------------"""
 def Ingreso(cadenaOculta, caracteresErrados):
     """
@@ -56,7 +44,7 @@ def salidaAnticipada(caracter):
     """
     return (caracter.upper() == 'FIN' or caracter == '0')
 
-def CaracterEnPalabra(caracter, PalabraAdivinar): #PARA PUNTOS
+def CaracterEnPalabra(caracter, PalabraAdivinar):
     """
     Toma como parametros: caracter(str), PalabraAdivinar(str)
     Retorna TRUE en caso de que el caracter este en PalabraAdivinar
@@ -86,15 +74,6 @@ def Contador(aciertos,desaciertos,caracteresErrados):
     """
     Puntos = " Aciertos: " + str(aciertos) + " Desaciertos: " + str(desaciertos) + caracteresErrados
     return(Puntos)
-
-def MensajeDelResultado(PalabraParaAdivinar, cadenaOculta):
-    """
-    NOTA: Guarda con cadenaOculta                                             
-    Retorna un mensaje al finalizar el juego
-    Firma: FedeBacelar    
-    """
-    return "FELICIDADES!!! LA PALABRA ERA " + PalabraParaAdivinar if PalabraParaAdivinar == "".join(cadenaOculta) else "PERDISTE!! LA PALABRA ERA "+ PalabraParaAdivinar +" BUENA SUERTE LA PROXIMA!!!"
-    #Opcional
 
 def OcultarCadena(PalabraAdivinar):
     """
@@ -157,7 +136,7 @@ def SeguirJugando(DiccionarioJugadores):
     return Seguir
 
 def CorrerJuego(DiccionarioJugadores):
-
+    #{'Jugador1':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida], 'Jugador2':etc}
     AbandonarJuego = False
 
     Ganador = False
@@ -170,7 +149,6 @@ def CorrerJuego(DiccionarioJugadores):
     while SeguirJugando(DiccionarioJugadores) and not AbandonarJuego and not Ganador:
 
         for Jugador in DiccionarioJugadores:
-            #{'Jugador':[PalabraAdivinar,caracter,aciertos,desaciertos,caracteresErrados,cadenaOculta,PuntosEnPartida]}
 
             PalabraAdivinar = DiccionarioJugadores[Jugador][0]
             caracter = DiccionarioJugadores[Jugador][1]

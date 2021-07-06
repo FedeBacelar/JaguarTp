@@ -32,12 +32,12 @@ def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos = None):
                 Puntos[Jugador]+=[0]
     else:
         for Jugador in nombres:
-            Puntos[Jugador][0] += DiccionarioJugadores[Jugador][6]         #Suma los PuntosGenerales
-            Puntos[Jugador][1] += DiccionarioJugadores[Jugador][2]         #Suma los aciertos
-            Puntos[Jugador][2] += DiccionarioJugadores[Jugador][3]         #Suma los desaciertos 
+            Puntos[Jugador][0] += DiccionarioJugadores[Jugador][6]
+            Puntos[Jugador][1] += DiccionarioJugadores[Jugador][2]
+            Puntos[Jugador][2] += DiccionarioJugadores[Jugador][3]
             if Jugador == NombreGanador:
-                Puntos[Jugador][3]+=[1]                                    #Si el jugador ganó suma 1
-    return Puntos                                                          #Devuelve un diccionario asi {'Jugador': [PuntosGenerales,aciertos,desaciertos,PartidasGanadas]}
+                Puntos[Jugador][3]+=[1]
+    return Puntos
 
 
 
@@ -48,7 +48,7 @@ def ImprimirResultadosGenerales(Puntos, CantidadPartidas):
     
     print("Partidas jugadas: ", CantidadPartidas)
     
-    puntos= OrdenarPorPuntaje(Puntos)   #Devuelve una lista asi [[Jugador,PuntosGenerales,aciertos,desaciertos,PartidasGanadas]]
+    puntos= OrdenarPorPuntaje(Puntos)
     for i in range(0,len(puntos)):
         jugador= puntos[i][0]
         PuntosGenerales = puntos[i][1]
