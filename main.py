@@ -4,8 +4,8 @@ from Etapa3 import elegir_palabra_aleatoria, pedir_longitud, palabra_a_adivinar
 from Etapa5 import SeguirJuego
 from EtapaTurnos import pedir_nombres, nueva_organizacion, dict_nombres
 from Etapa7 import ImprimirResultadoParcial, ImprimirResultadosGenerales,ResultadosGenerales
-from config import config, limpieza, cambio_valores
-from VariablesVarias import parametros
+from config import parametros
+
 
 # Desde Etapa1 se puede desactivar/Activar la Interfaz grafica que produce la funcion "Grafico"
 
