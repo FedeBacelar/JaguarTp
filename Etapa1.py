@@ -1,6 +1,6 @@
 from EtapaGrafica import Grafico
 from Etapa5 import Puntaje
-from VariablesVarias import parametros
+from config import parametros
 
 """-----------------------------------ETAPA_1-------------------------------------------------------------------------------"""
 def Ingreso(cadenaOculta, caracteresErrados):
