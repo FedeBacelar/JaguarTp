@@ -1,4 +1,4 @@
-from VariablesVarias import parametros
+from config import parametros
 
 def Puntaje(Aciertos,Desaciertos,Puntos=0):
     """
