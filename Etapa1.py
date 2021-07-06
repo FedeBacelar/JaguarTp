@@ -171,6 +171,11 @@ def CorrerJuego(DiccionarioJugadores):
                 caracteresErrados = contarDesaciertos(desaciertos, caracter, PalabraAdivinar, caracteresErrados)[1]
 
                 Fallo = not CaracterEnPalabra(caracter, PalabraAdivinar)
+                if Fallo:
+                    print("Fallaste!!")
+                else:
+                    print("Acertaste!!")
+
                 AbandonarJuego = salidaAnticipada(caracter)
                 
                 if cadenaOculta.count("?") == 0:
