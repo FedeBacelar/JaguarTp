@@ -22,6 +22,7 @@ def main():
     Turnos = dict_nombres(Lista_nombres, Ganador = None)
     seguir = True
     CantidadDePartidas = 0
+    DiccionarioPuntos={}                                   #Agrego este diccionario
     while seguir:
     
         LongitudPalabra = pedir_longitud()
@@ -31,14 +32,16 @@ def main():
             Turnos[Jugador][5] = OcultarCadena(Turnos[Jugador][0]) 
             
         DicResultadosJugadores, Ganador = CorrerJuego(Turnos)
-
-        CantidadDePartidas += 1
         ImprimirResultadoParcial(DicResultadosJugadores,Ganador)
-        if CantidadDePartidas > 1:
+        
+        if CantidadDePartidas == 0:
+            DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,DiccionarioPuntos) #me guarda los puntos de la primera partida
+        else:
             print("")
-            DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,Puntos = None)
+            DiccionarioPuntos= ResultadosGenerales(DicResultadosJugadores,Ganador,DiccionarioPuntos)
             ImprimirResultadosGenerales(DiccionarioPuntos, CantidadDePartidas)
-
+        CantidadDePartidas += 1
+        
         Turnos = nueva_organizacion(Turnos, Ganador)
         seguir = SeguirJuego()
 

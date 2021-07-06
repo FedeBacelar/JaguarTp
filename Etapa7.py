@@ -16,13 +16,12 @@ def ImprimirResultadoParcial(DiccionarioJugadores, NombreGanador):
 
 
 
-def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos = None):
+def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos):
     """ Recibe un diccionario con los datos de los jugadores, tambien el nombre del ganador de ESA partida y un diccionario de puntos. Devuelve
     el diccionario de puntos actualizado"
     Firma: Abigail
     """
     nombres = list(DiccionarioJugadores.keys())
-    Puntos = {} if Puntos == None else Puntos
     if len(Puntos) == 0: 
         for Jugador in nombres:
             Puntos[Jugador] = [DiccionarioJugadores[Jugador][6],DiccionarioJugadores[Jugador][2],DiccionarioJugadores[Jugador][3]]
@@ -36,7 +35,7 @@ def ResultadosGenerales(DiccionarioJugadores, NombreGanador, Puntos = None):
             Puntos[Jugador][1] += DiccionarioJugadores[Jugador][2]
             Puntos[Jugador][2] += DiccionarioJugadores[Jugador][3]
             if Jugador == NombreGanador:
-                Puntos[Jugador][3]+=[1]
+                Puntos[Jugador][3]+=1
     return Puntos
 
 
